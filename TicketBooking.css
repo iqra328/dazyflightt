@@ -1,0 +1,115 @@
+/* Container */
+.tfui-root {
+  min-height: 100vh;
+  background: #e6f5ef; /* light green background */
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Card */
+.tfui-card {
+  width: 100%;
+  max-width: 920px;
+  background: #fff; /* green card background */
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(7, 22, 24, 0.06);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: white; /* default text white */
+}
+
+/* Headings */
+.tfui-subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: white; /* white text on green */
+  margin: 14px 0 8px;
+}
+
+.tfui-muted {
+  font-size: 13px;
+  color: #d9f0e1; /* light green text */
+}
+
+/* Inputs */
+.tfui-input, .tfui-select {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #cfe7e0;
+  border-radius: 8px;
+  background: white; /* keep inputs white */
+  font-size: 14px;
+  outline: none;
+  color: #093132;
+}
+
+.tfui-input:focus, .tfui-select:focus {
+  border-color: #0a6ef0; /* blue focus */
+  box-shadow: 0 0 0 3px rgba(10, 110, 240, 0.2);
+}
+
+/* Buttons */
+.tfui-btn {
+  height: 44px;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.tfui-btn--green {
+  background: #17b055; /* white background */
+  color: #fff; /* green text */
+  border: 2px solid #17b055;
+}
+
+.tfui-btn--blue {
+  background: #0a6ef0; /* blue button */
+  color: white;
+}
+
+/* Rows and grids */
+.tfui-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tfui-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.tfui-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Label */
+.tfui-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #d9f0e1; /* light green label on card */
+}
+
+/* Section spacing */
+.section {
+  margin-bottom: 18px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .tfui-grid-3, .tfui-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .tfui-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,74 @@
+/* ButtonBar.css */
+.button-bar {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  align-items: center;
+  background: #e8f3ff; 
+  border-radius: 10px;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.item {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 0;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.3); 
+}
+
+.airport {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: #002AFF;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* RESPONSIVE - ONLY ADDED MEDIA QUERIES */
+@media (max-width: 1040px) {
+  .button-bar {
+    width: 95%;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-bar {
+    width: 95%;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    flex: 1 0 calc(50% - 10px);
+    min-width: 150px;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-bar {
+    width: 95%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .item {
+    width: 100%;
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,148 @@
+
+.search-filter-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.search-input input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  width: 250px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #5c6fff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 0;
+}
+
+.filter-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 150px;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 16px;
+  width: 100%;
+}
+
+.right-cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr; 
+  gap: 16px;
+}
+.h1{
+  display: flex;
+  justify-content: center;
+}
+.card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  color: white;
+}
+
+.card.large-card {
+  height: 416px;
+}
+
+.card.small-card {
+  height: 200px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+/* ================= RESPONSIVE MOBILE VIEW ================= */
+@media (max-width: 768px) {
+  /* Search + Filter */
+  .search-filter-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input input {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .filter-box {
+    justify-content: space-between;
+  }
+
+  .filter-select, .filter-btn {
+    width: 100%;
+  }
+
+  /* Card grid */
+  .card-grid {
+    grid-template-columns: 1fr;   
+  }
+
+  .right-cards {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card.large-card {
+    height: 300px;
+  }
+
+  .card.small-card {
+    height: 180px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card.large-card {
+    height: 240px;
+  }
+
+  .card.small-card {
+    height: 150px;
+  }
+
+  .card-content {
+    left: 8px;
+    bottom: 8px;
+  }
+
+  .card-content h3 {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+}

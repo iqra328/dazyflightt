@@ -1,0 +1,282 @@
+/* MapHeader.css - CLEAN VERSION */
+.Wapperh {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* TOP BAR */
+.Baro {
+  display: flex;
+  gap: 10px;
+  height: 5vh;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  flex-wrap: nowrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  z-index: 1;
+  border-radius: 10px;
+  border: 1.5px solid #d9d9d9;
+  font-size: 14px;
+  background: white;
+}
+
+/* SELECT DROPDOWN */
+.categories-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.categories-dropdown select  {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #0050ff;
+  color: white;
+  padding: 12px 40px 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  min-width: 180px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 80, 255, 0.3);
+}
+
+.btn{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #0050ff;
+  color: white;
+  padding: 12px 10px 12px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  min-width: 100px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 80, 255, 0.3);
+
+}
+
+.categories-dropdown option {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  background: #afc8ff;
+  color: white;
+  padding: 12px 40px 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  min-width: 180px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 80, 255, 0.3);
+}
+
+/* Fix map image source - use working image URL */
+.map {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+  background: #e0e0e0; /* Fallback color if image doesn't load */
+}
+
+/* Add this if image doesn't show */
+.map::before {
+  content: "Map Loading...";
+  display: none;
+}
+
+/* SIDEBAR */
+.Right {
+  width: 30%;
+  background: rgba(0, 60, 255, 0.08);
+  border-radius: 0 12px 12px 0;
+  padding: 20px;
+  box-sizing: border-box;
+  border-left: 1px solid rgba(0, 60, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.sidebar-title {
+  color: #0050ff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 80, 255, 0.2);
+}
+
+.location-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location-item {
+  background: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.location-item:hover {
+  border-color: #0050ff;
+  transform: translateX(5px);
+}
+
+.location-icon {
+  color: #0050ff;
+  font-size: 16px;
+}
+
+.location-name {
+  flex: 1;
+  color: #333;
+  font-size: 14px;
+}
+
+.location-distance {
+  color: #666;
+  font-size: 12px;
+}
+
+/* MAP CONTAINER */
+.map-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  height: 500px;
+  border: 1px solid #e0e0e0;
+}
+
+/* MAP FIX - if image doesn't load */
+.map-fallback {
+  width: 70%;
+  background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1040px) {
+  .Wapperh {
+    width: 95%;
+    max-width: 1000px;
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Wapperh {
+    width: 95%;
+  }
+  
+  .map-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .map {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .Right {
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    border-left: none;
+    border-top: 1px solid rgba(0, 60, 255, 0.1);
+    padding: 15px;
+  }
+  
+  .Baro {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .search-input {
+    min-width: 150px;
+  }
+  
+  .categories-dropdown select {
+    min-width: 150px;
+    padding: 12px 35px 12px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Wapperh {
+    width: 100%;
+    padding: 15px 10px;
+  }
+  
+  .Baro {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .categories-dropdown {
+    width: 100%;
+  }
+  
+  .categories-dropdown select {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .map {
+    height: 250px;
+  }
+  
+  .Right {
+    padding: 12px;
+  }
+  
+  .sidebar-title {
+    font-size: 16px;
+  }
+  
+  .location-item {
+    padding: 10px 12px;
+  }
+}

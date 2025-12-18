@@ -1,0 +1,117 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  width: 1000px;
+  background: #4b74ff;
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+}
+
+.left-section {
+  width: 50%;
+}
+
+.left-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.left-section p {
+  width: 70%;
+}
+
+.flight-image {
+  width: 200px;
+  margin-top: 20px;
+}
+
+.right-section {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-box {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-box h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.qr-area {
+  margin: 15px 0;
+}
+
+.book-btn {
+  width: 100%;
+  font-weight: bold;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+.footer-container {
+flex-direction: column;
+text-align: center;
+padding: 30px;
+}
+
+
+.left-section,
+.right-section {
+width: 100%;
+}
+
+
+.left-section p {
+width: 100%;
+}
+
+
+.flight-image {
+width: 150px;
+margin: 20px auto;
+}
+
+
+.form-box {
+width: 90%;
+margin-top: 20px;
+}
+}
+
+
+@media (max-width: 500px) {
+.footer-container {
+padding: 20px;
+}
+
+
+.left-section h2 {
+font-size: 22px;
+}
+
+
+.flight-image {
+width: 120px;
+}
+
+
+.form-box {
+padding: 18px;
+}
+
+
+.qr-area svg {
+font-size: 60px !important;
+}
+}
